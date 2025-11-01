@@ -1,0 +1,5 @@
+API_KEY - AIzaSyCHO21QY7RzhkLLngQZM83Yzu2G4OIwCkc
+DATABASE_URL - https://espproject-f7db2-default-rtdb.europe-west1.firebasedatabase.app/
+PROJECT_NAME - ESPProject
+PROJECT_ID - espproject-f7db2
+PROJECT_NUMBER - 982557803159
