@@ -33,7 +33,7 @@ All 5 hackathon team members are now credited:
 | **Luka Alaverdashvili** | 🔌 IoT Engineer |
 | **Erekle Ebralidze** | 🌾 Agronomist & Business Process Manager |
 | **Dato Svanidze** | 🔧 IoT Engineer |
-| **Mate Levidze** | 🎨 Application Designer |
+| **Mate Levidze** | 🧑‍💻 Software Developer |
 | **Nika Tugushi** | 📊 Marketing & Business Process Manager |
 
 ## 🔐 Security Implemented

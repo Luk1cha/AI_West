@@ -53,7 +53,7 @@ An intelligent system that:
 - **Luka Alaverdashvili** (IoT Engineer): Hardware development, firmware
 - **Erekle Ebralidze** (Agronomist): Domain knowledge, business requirements
 - **Dato Svanidze** (IoT Engineer): Communication protocols, device integration
-- **Mate Levidze** (Designer): UI/UX, visual design
+- **Mate Levidze** (Software Developer): APP, BackEnd, UI/UX
 - **Nika Tugushi** (Marketing/PM): Coordination, business planning
 
 ## Performance Metrics

@@ -27,7 +27,7 @@ AI-WEST is an intelligent garden monitoring system that measures environmental c
 | 🔌 IoT Engineer | Luka Alaverdashvili |
 | 🌾 Agronomist & Business Process Manager | Erekle Ebralidze |
 | 🔧 IoT Engineer | Dato Svanidze |
-| 🎨 Application Designer | Mate Levidze |
+| 🧑‍💻 Software Developer | Mate Levidze |
 | 📊 Marketing & Business Process Manager | Nika Tugushi |
 
 ## 🏗️ Project Structure

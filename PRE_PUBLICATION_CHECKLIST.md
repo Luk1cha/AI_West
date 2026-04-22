@@ -61,7 +61,7 @@
   - [ ] Luka Alaverdashvili - IoT Engineer
   - [ ] Erekle Ebralidze - Agronomist & Business Process Manager
   - [ ] Dato Svanidze - IoT Engineer
-  - [ ] Mate Levidze - Application Designer
+  - [ ] Mate Levidze - Software Developer
   - [ ] Nika Tugushi - Marketing & Business Process Manager
 - [ ] LICENSE file includes copyright to hackathon team
 - [ ] Security notice about archived project status is present
