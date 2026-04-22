@@ -13,12 +13,16 @@
 #include "addons/RTDBHelper.h"
 
 // WiFi credentials
-#define WIFI_SSID "Mi_10T"
-#define WIFI_PASSWORD "12345678"
+// ⚠️ IMPORTANT: Configure these in platformio.ini or environment variables
+// DO NOT hardcode credentials in this file!
+#define WIFI_SSID ""
+#define WIFI_PASSWORD ""
 
 // Firebase credentials
-#define API_KEY "AIzaSyCHO21QY7RzhkLLngQZM83Yzu2G4OIwCkc"
-#define DATABASE_URL "https://espproject-f7db2-default-rtdb.europe-west1.firebasedatabase.app"
+// ⚠️ IMPORTANT: Configure these in platformio.ini or environment variables
+// DO NOT hardcode credentials in this file!
+#define API_KEY ""
+#define DATABASE_URL ""
 
 // Sensor pins
 #define LDR_PIN 34         // j22
