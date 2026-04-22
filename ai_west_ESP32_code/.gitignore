@@ -82,5 +82,3 @@ yarn-error.*
 # typescript
 *.tsbuildinfo
 
-# @end expo-cli
-.pio/libdeps/esp32dev/Firebase Arduino Client Library for ESP8266 and ESP32
