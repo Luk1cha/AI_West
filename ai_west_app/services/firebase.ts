@@ -2,14 +2,14 @@ import { getApps, initializeApp } from "firebase/app";
 import { getDatabase } from "firebase/database";
 
 const firebaseConfigSensor = {
-  apiKey: "AIzaSyCHO21QY7RzhkLLngQZM83Yzu2G4OIwCkc",
-  authDomain: "espproject-f7db2.firebaseapp.com",
-  databaseURL: "https://espproject-f7db2-default-rtdb.europe-west1.firebasedatabase.app",
-  projectId: "espproject-f7db2",
-  storageBucket: "espcontroller-f7db2.firebasestorage.app",
-  messagingSenderId: "982557803159",
-  appId: "1:982557803159:web:ae4556cd56d3b45050ac82",
-  measurementId: "G-F8MYPL34W2"
+  apiKey: process.env.EXPO_PUBLIC_FIREBASE_SENSOR_API_KEY,
+  authDomain: process.env.EXPO_PUBLIC_FIREBASE_SENSOR_AUTH_DOMAIN,
+  databaseURL: process.env.EXPO_PUBLIC_FIREBASE_SENSOR_DATABASE_URL,
+  projectId: process.env.EXPO_PUBLIC_FIREBASE_SENSOR_PROJECT_ID,
+  storageBucket: process.env.EXPO_PUBLIC_FIREBASE_SENSOR_STORAGE_BUCKET,
+  messagingSenderId: process.env.EXPO_PUBLIC_FIREBASE_SENSOR_MESSAGING_SENDER_ID,
+  appId: process.env.EXPO_PUBLIC_FIREBASE_SENSOR_APP_ID,
+  measurementId: process.env.EXPO_PUBLIC_FIREBASE_SENSOR_MEASUREMENT_ID
 };
 
 // ✅ Named app approach – თავიდან არ ინიციალიზდეს ორჯერ
