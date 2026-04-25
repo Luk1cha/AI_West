@@ -4,7 +4,7 @@
 
 ### 🔌 IoT Engineers
 - **Luka Alaverdashvili** — ESP32 firmware development, sensor integration, hardware setup
-- **Dato Svanidze** — IoT system architecture, device communication, Bluetooth implementation
+- **Dato Svanidze** — IoT system architecture, device communication,
 
 ### 🌾 Agronomic Expertise & Business
 - **Erekle Ebralidze** — Agronomic guidance, business process management, feature requirements
@@ -35,7 +35,7 @@ The project is published as-is for educational and reference purposes.
 - **Frontend**: React Native, Expo, TypeScript
 - **Backend**: Firebase, Express.js
 - **Hardware**: ESP32, DHT sensors
-- **Communication**: Bluetooth LE, REST API
+- **Communication**: WIFI, REST API
 - **Design**: NativeWind (Tailwind CSS)
 
 ---

@@ -16,7 +16,7 @@ AI-WEST is an intelligent garden monitoring system that measures environmental c
 - **Smart Watering**: AI-powered automated irrigation control
 - **Mobile Dashboard**: Cross-platform app (iOS, Android, Web)
 - **Cloud Sync**: Firebase real-time database
-- **Bluetooth Connectivity**: Direct ESP32 device communication
+- **WIFI**: Direct ESP32 device communication
 - **Community Forum**: Share gardening experiences
 - **Data Analytics**: Export sensor data for analysis
 
@@ -43,7 +43,6 @@ ai_west/
 │   │   └── ჩემი ბაղი.tsx          # Garden management
 │   ├── components/                # Reusable UI components
 │   ├── services/                  # Business logic
-│   │   ├── BluetoothService.tsx   # BLE communication
 │   │   ├── firebase*.ts           # Firebase integration
 │   │   └── AIService.tsx          # AI recommendations
 │   └── package.json
@@ -103,15 +102,9 @@ node server.js   # Runs on http://localhost:3000
 ## 🔐 Security Notes
 
 ⚠️ **Before publishing:**
-- Remove `FireBaseInfo.txt` (contains credentials)
 - Use `.env.example` template for Firebase config
 - Never commit `.env` files
-- Check git history for any exposed API keys
 
-```bash
-# Verify no secrets in repo
-git grep -i "password\|secret\|key"
-```
 
 ## 📱 App Screens
 
@@ -121,19 +114,6 @@ git grep -i "password\|secret\|key"
 - **Forum**: Community discussions
 - **Excel Export**: Historical data analysis
 
-## 🔌 System Architecture
-
-```
-Mobile App (iOS/Android/Web)
-    ↓
-Firebase Cloud
-    ↓ (Bluetooth)
-    ↓ (REST API)
-    ↓
-ESP32 Device
-    ↓
-Sensors + Relay
-```
 
 ## 📊 Sensor Data Points
 
