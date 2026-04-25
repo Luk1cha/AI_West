@@ -85,6 +85,6 @@ yarn-error.*
 #PlatformIo
 .pio/
 .vscode/
-.include/secrets.h
+.include/secrets.h/
 *.bin
 *.elf
