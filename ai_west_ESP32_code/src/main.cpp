@@ -1,4 +1,5 @@
 #include <Arduino.h>
+#include <secrets.h>
 #define FIREBASE_DISABLE_FB_STORAGE
 #define FIREBASE_DISABLE_FIRESTORE
 #define FIREBASE_DISABLE_FCM
@@ -11,14 +12,6 @@
 #include "addons/TokenHelper.h"
 // Provide the RTDB payload printing info and other helper functions
 #include "addons/RTDBHelper.h"
-
-// WiFi credentials
-#define WIFI_SSID "Mi_10T"
-#define WIFI_PASSWORD "12345678"
-
-// Firebase credentials
-#define API_KEY "AIzaSyCHO21QY7RzhkLLngQZM83Yzu2G4OIwCkc"
-#define DATABASE_URL "https://espproject-f7db2-default-rtdb.europe-west1.firebasedatabase.app"
 
 // Sensor pins
 #define LDR_PIN 34         // j22
