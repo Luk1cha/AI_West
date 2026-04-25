@@ -13,12 +13,19 @@
 *.elf
 *.hex
 
-# Credentials and secrets
+# Credentials and secrets - CRITICAL: Never commit
+include/secrets.h
 src/config.h
 src/credentials.h
-include/secrets.h
+secrets.h
+config.h
+credentials.h
 *.pem
 *.key
+*.pri
+.env
+.env.local
+.env.*.local
 
 # OS and temp files
 *.tmp
