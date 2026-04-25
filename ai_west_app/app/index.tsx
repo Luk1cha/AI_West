@@ -9,7 +9,8 @@ import { ref as dbRef, onValue } from 'firebase/database';
 import { dbSensor as realtimeDB } from '../services/firebase'; // Your existing firebase config
 
 // -------------------- CONFIG --------------------
-const OPENAI_API_KEY = process.env.OPENAI_API_KEY || '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';
+const OPENAI_API_KEY = process.env.EXPO_PUBLIC_OPENAI_API_KEY;
+if (!OPENAI_API_KEY) { console.error('OpenAI API key not configured'); }
 const FIREBASE_CONFIG = (global as any).FIREBASE_CONFIG || null;
 const ASSISTANT_NAME = 'AgroNiko AI';
 const CROP = 'თხილი';
