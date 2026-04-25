@@ -9,8 +9,8 @@
 ### 🌾 Agronomic Expertise & Business
 - **Erekle Ebralidze** — Agronomic guidance, business process management, feature requirements
 
-### 🎨 Design
-- **Mate Levidze** — Mobile application UI/UX design, user experience optimization
+### 🧑‍💻 Software Developer
+- **Mate Levidze** — Mobile application, UI/UX design, Back End
 
 ### 📊 Marketing & Strategy
 - **Nika Tugushi** — Marketing strategy, business process optimization, project coordination

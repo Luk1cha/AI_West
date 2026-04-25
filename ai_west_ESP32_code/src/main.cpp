@@ -1,4 +1,5 @@
 #include <Arduino.h>
+#include <secrets.h>
 #define FIREBASE_DISABLE_FB_STORAGE
 #define FIREBASE_DISABLE_FIRESTORE
 #define FIREBASE_DISABLE_FCM
@@ -11,18 +12,6 @@
 #include "addons/TokenHelper.h"
 // Provide the RTDB payload printing info and other helper functions
 #include "addons/RTDBHelper.h"
-
-// WiFi credentials
-// ⚠️ IMPORTANT: Configure these in platformio.ini or environment variables
-// DO NOT hardcode credentials in this file!
-#define WIFI_SSID ""
-#define WIFI_PASSWORD ""
-
-// Firebase credentials
-// ⚠️ IMPORTANT: Configure these in platformio.ini or environment variables
-// DO NOT hardcode credentials in this file!
-#define API_KEY ""
-#define DATABASE_URL ""
 
 // Sensor pins
 #define LDR_PIN 34         // j22
