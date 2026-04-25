@@ -8,11 +8,11 @@
         {
             "name": "PlatformIO",
             "includePath": [
-                "C:/Users/Gstore loves you/Projects/AI_West/AIWest_ESP32Code/include",
-                "C:/Users/Gstore loves you/Projects/AI_West/AIWest_ESP32Code/src",
-                "C:/Users/Gstore loves you/Projects/AI_West/AIWest_ESP32Code/.pio/libdeps/esp32dev/DHT sensor library",
-                "C:/Users/Gstore loves you/Projects/AI_West/AIWest_ESP32Code/.pio/libdeps/esp32dev/Adafruit Unified Sensor",
-                "C:/Users/Gstore loves you/Projects/AI_West/AIWest_ESP32Code/.pio/libdeps/esp32dev/Firebase Arduino Client Library for ESP8266 and ESP32/src",
+                "C:/Users/Gstore loves you/Projects/ai_west/ai_west_ESP32_code/include",
+                "C:/Users/Gstore loves you/Projects/ai_west/ai_west_ESP32_code/src",
+                "C:/Users/Gstore loves you/Projects/ai_west/ai_west_ESP32_code/.pio/libdeps/esp32dev/DHT sensor library",
+                "C:/Users/Gstore loves you/Projects/ai_west/ai_west_ESP32_code/.pio/libdeps/esp32dev/Adafruit Unified Sensor",
+                "C:/Users/Gstore loves you/Projects/ai_west/ai_west_ESP32_code/.pio/libdeps/esp32dev/Firebase Arduino Client Library for ESP8266 and ESP32/src",
                 "C:/Users/Gstore loves you/.platformio/packages/framework-arduinoespressif32/libraries/Ethernet/src",
                 "C:/Users/Gstore loves you/.platformio/packages/framework-arduinoespressif32/libraries/WiFi/src",
                 "C:/Users/Gstore loves you/.platformio/packages/framework-arduinoespressif32/libraries/Update/src",
@@ -247,11 +247,11 @@
             "browse": {
                 "limitSymbolsToIncludedHeaders": true,
                 "path": [
-                    "C:/Users/Gstore loves you/Projects/AI_West/AIWest_ESP32Code/include",
-                    "C:/Users/Gstore loves you/Projects/AI_West/AIWest_ESP32Code/src",
-                    "C:/Users/Gstore loves you/Projects/AI_West/AIWest_ESP32Code/.pio/libdeps/esp32dev/DHT sensor library",
-                    "C:/Users/Gstore loves you/Projects/AI_West/AIWest_ESP32Code/.pio/libdeps/esp32dev/Adafruit Unified Sensor",
-                    "C:/Users/Gstore loves you/Projects/AI_West/AIWest_ESP32Code/.pio/libdeps/esp32dev/Firebase Arduino Client Library for ESP8266 and ESP32/src",
+                    "C:/Users/Gstore loves you/Projects/ai_west/ai_west_ESP32_code/include",
+                    "C:/Users/Gstore loves you/Projects/ai_west/ai_west_ESP32_code/src",
+                    "C:/Users/Gstore loves you/Projects/ai_west/ai_west_ESP32_code/.pio/libdeps/esp32dev/DHT sensor library",
+                    "C:/Users/Gstore loves you/Projects/ai_west/ai_west_ESP32_code/.pio/libdeps/esp32dev/Adafruit Unified Sensor",
+                    "C:/Users/Gstore loves you/Projects/ai_west/ai_west_ESP32_code/.pio/libdeps/esp32dev/Firebase Arduino Client Library for ESP8266 and ESP32/src",
                     "C:/Users/Gstore loves you/.platformio/packages/framework-arduinoespressif32/libraries/Ethernet/src",
                     "C:/Users/Gstore loves you/.platformio/packages/framework-arduinoespressif32/libraries/WiFi/src",
                     "C:/Users/Gstore loves you/.platformio/packages/framework-arduinoespressif32/libraries/Update/src",
@@ -485,7 +485,7 @@
                 ]
             },
             "defines": [
-                "PLATFORMIO=60118",
+                "PLATFORMIO=60119",
                 "ARDUINO_ESP32_DEV",
                 "HAVE_CONFIG_H",
                 "MBEDTLS_CONFIG_FILE=\"mbedtls/esp_config.h\"",

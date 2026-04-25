@@ -82,3 +82,9 @@ yarn-error.*
 # typescript
 *.tsbuildinfo
 
+#PlatformIo
+.pio/
+.vscode/
+.include/secrets.h
+*.bin
+*.elf
