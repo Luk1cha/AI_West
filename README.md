@@ -60,13 +60,7 @@ ai_west/
 - **ESP32**: PlatformIO IDE
 - **Firebase**: Active project with credentials
 
-### Mobile App
-
-```bash
-cd ai_west_app
-npm install
-npm start
-```
+### Mobile App - ***READ ai_west_app/README***
 
 ### ESP32 Firmware
 
@@ -77,13 +71,6 @@ cd ai_west_ESP32_code
 # Build and upload
 ```
 
-### Backend Server (Development)
-
-```bash
-cd ai_west_app
-node server.js   # Runs on http://localhost:3000
-```
-
 ## 📦 Tech Stack
 
 ### Mobile App
@@ -92,7 +79,6 @@ node server.js   # Runs on http://localhost:3000
 - **TypeScript** — Type safety
 - **Firebase** — Authentication & database
 - **NativeWind** — Tailwind CSS for React Native
-- **react-native-ble-plx** — Bluetooth communication
 
 ### Hardware
 - **ESP32** — Microcontroller with WiFi/Bluetooth
