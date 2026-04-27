@@ -20,8 +20,8 @@
 #define MOTOR_IN 26       // Motor on/off pin
 
 
-#define MOTOR_RUN_TIME 5000 // Run motor for 5 seconds
-#define MOISTURE_THRESHOLD 40 // Start motor if moisture is below this
+#define MOTOR_RUN_TIME 3000 // Run motor for 3 seconds
+#define MOISTURE_THRESHOLD 60 // Start motor if moisture is below this
 
 #define LED_PIN 12 //LED Pin
 
@@ -37,7 +37,7 @@ unsigned long sendDataPrevMillis = 0;
 bool signupOK = false;
 bool MotorRunning = false;
 unsigned long motorStartTime = 0;
-int moisturePercent = 25;
+// int moisturePercent = 25;
 
 void setupMotor() {
   pinMode(MOTOR_IN, OUTPUT);
@@ -52,7 +52,7 @@ void startMotor() {
     digitalWrite(MOTOR_IN, HIGH);
     MotorRunning = true;
     motorStartTime = millis();
-    moisturePercent = moisturePercent + 5;
+    // moisturePercent = moisturePercent + 5; // Simulate moisture increase for testing
   }
 }
 
@@ -71,10 +71,27 @@ void checkMotorTimer() {
 }
 
 void LedBlink(){
-  digitalWrite(LED_PIN, HIGH);
-  delay(50);
-  digitalWrite(LED_PIN, LOW);
-  delay(2);
+  static unsigned long previousMillis = 0;
+  static bool ledState = false;
+  static bool isHigh = false;
+  
+  unsigned long currentMillis = millis();
+  
+  if (isHigh) {
+    // LED is currently HIGH, check if 50ms have passed
+    if (currentMillis - previousMillis >= 50) {
+      digitalWrite(LED_PIN, LOW);
+      previousMillis = currentMillis;
+      isHigh = false;
+    }
+  } else {
+    // LED is currently LOW, check if 2ms have passed
+    if (currentMillis - previousMillis >= 2) {
+      digitalWrite(LED_PIN, HIGH);
+      previousMillis = currentMillis;
+      isHigh = true;
+    }
+  }
 }
 
 void setup() {
@@ -128,7 +145,7 @@ void setup() {
 
 void loop() {
   // Check if motor needs to be stopped
-  checkMotorTimer();
+  // checkMotorTimer();
 
   if (Firebase.ready() && signupOK && (millis() - sendDataPrevMillis > 2000 || sendDataPrevMillis == 0)) {
     sendDataPrevMillis = millis();
@@ -138,9 +155,9 @@ void loop() {
     int lightValue = map(lightValueAnalog, 4095, 0, 100, 0);
     
     // // Read YL-69 soil moisture sensor
-    // int soilMoisture = analogRead(YL69_PIN);
-    // // გადაიყვანე პროცენტებში (4095 = მშრალი, 0 = სველი)
-    // int moisturePercent = map(soilMoisture, 4095, 0, 0, 100);
+    int soilMoisture = analogRead(YL69_PIN);
+    // გადაიყვანე პროცენტებში (4095 = მშრალი, 0 = სველი)
+    int moisturePercent = map(soilMoisture, 4095, 0, 0, 100);
     
     // Read DHT11 sensor
     float temperature = dht.readTemperature();
@@ -154,12 +171,12 @@ void loop() {
     }
 
     // Check soil moisture and control motor
-    if (moisturePercent < MOISTURE_THRESHOLD && !MotorRunning) {
-      Serial.print("⚠️  Soil too dry (");
-      Serial.print(moisturePercent);
-      Serial.println("%)");
-      startMotor();
-    }
+    // if (moisturePercent < MOISTURE_THRESHOLD && !MotorRunning) {
+    //   Serial.print("⚠️  Soil too dry (");
+    //   Serial.print(moisturePercent);
+    //   Serial.println("%)");
+    //   startMotor();
+    // }
     
     // Create JSON object
     FirebaseJson json;
@@ -170,6 +187,7 @@ void loop() {
     json.set("humidity", humidity);
     json.set("timestamp", millis());
     json.set("device", "ESP32");
+    json.set("deviceId", "001");
     
     // Send to Firebase
     if (Firebase.RTDB.setJSON(&fbdo, "/data", &json)) {
