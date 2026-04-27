@@ -71,27 +71,22 @@ void checkMotorTimer() {
 }
 
 void LedBlink(){
-  static unsigned long previousMillis = 0;
-  static bool ledState = false;
-  static bool isHigh = false;
-  
-  unsigned long currentMillis = millis();
-  
-  if (isHigh) {
-    // LED is currently HIGH, check if 50ms have passed
-    if (currentMillis - previousMillis >= 50) {
-      digitalWrite(LED_PIN, LOW);
-      previousMillis = currentMillis;
-      isHigh = false;
-    }
-  } else {
-    // LED is currently LOW, check if 2ms have passed
-    if (currentMillis - previousMillis >= 2) {
-      digitalWrite(LED_PIN, HIGH);
-      previousMillis = currentMillis;
-      isHigh = true;
-    }
+  digitalWrite(LED_PIN, HIGH);
+  delay(50);
+  digitalWrite(LED_PIN, LOW);
+}
+
+void WiFiConnect() {
+  WiFi.begin(WIFI_SSID, WIFI_PASSWORD);
+  Serial.print("Connecting to WiFi");
+  while (WiFi.status() != WL_CONNECTED) {
+    delay(300);
+    Serial.print(".");
   }
+  Serial.println();
+  Serial.println("✓ WiFi Connected!");
+  Serial.print("IP Address: ");
+  Serial.println(WiFi.localIP());
 }
 
 void setup() {
@@ -111,16 +106,7 @@ void setup() {
   Serial.println("Starting...");
   
   // Connect WiFi
-  WiFi.begin(WIFI_SSID, WIFI_PASSWORD);
-  Serial.print("Connecting to WiFi");
-  while (WiFi.status() != WL_CONNECTED) {
-    delay(300);
-    Serial.print(".");
-  }
-  Serial.println();
-  Serial.println("✓ WiFi Connected!");
-  Serial.print("IP Address: ");
-  Serial.println(WiFi.localIP());
+  WiFiConnect();
   
   // Firebase configuration
   config.api_key = API_KEY;
@@ -146,6 +132,10 @@ void setup() {
 void loop() {
   // Check if motor needs to be stopped
   // checkMotorTimer();
+   if(WiFi.status() != WL_CONNECTED){
+    Serial.println("⚠️  WiFi disconnected, trying to reconnect...");
+    WiFiConnect();
+  }
 
   if (Firebase.ready() && signupOK && (millis() - sendDataPrevMillis > 2000 || sendDataPrevMillis == 0)) {
     sendDataPrevMillis = millis();
